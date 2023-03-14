@@ -1,0 +1,247 @@
+from turtle import *
+
+def wrong():
+    penup()
+    goto(0,-200)
+    pencolor("yellow")
+    write("You are Wrong",align="center",font=("Copper Black",80,"normal"))
+
+def correct():
+    penup()
+    goto(0,-200)
+    pencolor("yellow")
+    write("You are Correct",align="center",font=("Copper Black",80,"normal"))
+
+def maths():
+    h=0
+    if lev=="Easy":
+        a1=textinput("Queston 1","Which of the following is called the 'Beast Number'? \n(a) 6666\t(b) 666\t(c) 66\t(d) 66666")
+        if a1=="b":
+            correct()
+            h+=1
+        elif a1 in ("a","c","d"):
+            wrong()
+        a2=textinput("Question 2","Which of the following is called 'Pythagoras Constant'?\n(a) Square root of i(iota)\t(b) Square root of 1\t(c) Square root of 2\t(d) Square root of 3")
+        undo()
+        if a2=="c":
+            correct()
+            h+=1
+        elif a2 in ("a","b","d"):
+            wrong()
+        a3=textinput("Question 3","When 5x6^100 is divided by 2x6^100 then the remainder is:-\n(a) 1\t(b) 2\t(c) 6^100\t(d) Kuch hota hoga")
+        undo()
+        if a3=="c":
+            correct()
+            h+=1
+        elif a3 in ("a","b","d"):
+            wrong()
+    elif lev=="Medium":
+        a1=textinput("Question 1","The symbol of division is also known as ?\n(a) Obious\t(b) Obela\t(c) Obeon\t(d) Obelus")
+        if a1=="d":
+            correct()
+            h+=1
+        elif a1 in ("a","b","c"):
+            wrong()
+        a2=textinput("Questin 2","If 1+4=5 , 2+5=12 , 3+6=21 then 8+11=?\n(a) 19\t(b) 88\t(c) 91\t(d) 96")
+        undo()
+        if a2=="d":
+            correct()
+            h+=1
+        elif a2 in ("a","b","c"):
+            wrong()
+        a3=textinput("Question 3","How many natural numbers can be formed from 1,1,2,2[by using them exactly once] \n(a) 2\t(b) 6\t(c) 12\t(d) 24")
+        undo()
+        if a3=="c":
+            correct()
+            h+=1
+        elif a3 in ("a","b","d"):
+            wrong()
+    elif lev=="Hard":
+        a1=textinput("Question 1","If P=tan(tan inverse 5), Q=tan inverse(tan 5) then \n(a) P=Q\t(b) P>Q\t(c) P<Q\t(d) None of these")
+        if a1=="b":
+            correct()
+            h+=1
+        elif a1 in ("a","c","d"):
+            wrong()
+        a2=textinput("Question 2","How many zeroes in the end of 100! ?\n(a) 20\t(b) 22\t(c) 24\t(d) 23")
+        undo()
+        if a2=="c":
+            correct()
+            h+=1
+        elif a2 in ("a","b","d"):
+            wrong()
+        a3=textinput("Question 3","Which of the following is the smallest number that can be divisble by all the natural numbers from 1....10 ?\n(a) 2340\t(b) 2520\t(c) 2580\t(d) 2240")
+        undo()
+        if a3=="c":
+            correct()
+            h+=1
+        elif a3 in ("a","b","d"):
+            wrong()
+    p=textinput("","Do you want to know your total score")
+    undo()
+    return h ,p
+def physics():
+    h=0
+    if lev=="Easy":
+        a1=textinput("Question 1","The vacant space of a solid’s, electronic energy level is _")
+        if a1==("Hole" or "hole"):
+            correct()
+            h+=1
+        else:
+            wrong()
+        a2=textinput("Question 2","In a vernier caliper N divisions of vernier scale coincides with (N – 1) divisions of main scale (in which length of one division is 1 mm). The least count of the instrument should be\n (a) N\t(b) N-1\t(c) 1/10 N\t(d) 1/N-1")
+        undo()
+        if a2=="c":
+            correct()
+            h+=1
+        elif a2 in ("a","b","d"):
+            wrong()
+        a3=textinput("Question 3","In a particular system, the unit of length, mass and time are chosen to be 10 cm, 10 g and 0.1 s respectively. The unit of force in this system will be equivalent to\n (a) 0.1 N\t(b) 1 N\t(c) 10 N\t(d) 100 N")
+        undo()
+        if a3 =="a":
+            correct()
+            h+=1
+        elif a3 in ("b","c","d"):
+            wrong()
+    elif lev=="Medium":
+        a1=textinput("Question 1","A train of 150 meters long is going towards north direction at a speed of 10 m/s. A parrot flies at the speed of 5 m/s towards south direction parallel to the railway track. The time taken by the parrot to cross the train is\n (a) 12 sec\t(b) 8 sec\t(c) 15 sec\t(d) 10 sec")
+        if a1== "d":
+            correct()
+            h+=1
+        elif a1 in ("a","b","c"):
+            wrong()
+        a2=textinput("Question 2","How is the mass of an electron get converted to energy?")
+        undo()
+        if a2=="Combining it with a positron":
+            correct()
+            h+=1
+        else:
+            wrong()
+        a3=textinput("Question 3","A body is thrown vertically upward from the ground. It reaches a maximum height of 20 min 5 sec. After what time, it will reach the ground from its maximum height position?\n(a) 2.5 sec\t(b) 5 sec\t(c) 10 sec\t(d) 25 sec")
+        undo()
+        if a3=="b":
+            correct()
+            h+=1
+        elif a3 in ("a","c","d"):
+            wrong()
+    elif lev=="Hard":
+        a1=textinput("Question 1","What will be the ratio of the distances moved by a freely falling body from rest in 4th and 5th seconds of the journey?\n(a) 4: 5\t(b) 7: 9\t(c) 16: 25\t(d) 1: 1")
+        if a1 == "b":
+            correct()
+            h+=1
+        elif a1 in ("a","c","d"):
+            wrong()
+        a2=textinput("Question 2"," A man of 50 kg mass is standing in a gravity-free space at a height of 10 m above the floor. He throws a stone of 0.5 kg mass downwards with a speed 2 m/s. When the stone reaches the floor, the distance of the man above the floor will be:\n(a) 9.9 m\t(b) 10.1 m\t(c) 10 m\t(d) 20 m")
+        undo()
+        if a2 =="b":
+            correct()
+            h+=1
+        elif a2 in ("a","b","d"):
+            wrong()
+        a3=textinput("Question 3"," An engine develops 10 kW of power. How much time will it take to lift a mass of 200 kg to a height of 40 meters (g = 10 ms2)")
+        undo()
+        if a3 =="8":
+            correct()
+            h+=1
+        else:
+            wrong()
+    p=textinput("","Do you want to know your total score")
+    undo()
+    return h ,p
+def chemistry():
+    h=0
+    if lev=="Easy":
+        a1=textinput("Question 1 "," M is the molecular weight of KMnO4. The equivalent weight of KMnO4 when it is converted into K2MnO4 is\n(a) M\t(b) M/3\t(c) M/5\t(d) M/7")
+        if a1=="a":
+            correct()
+            h+=1
+        elif a1 in ("b","c","d"):
+            wrong()
+        a2=textinput("Question 2","Which among the following is the most deactivating meta-directing group in aromatic substitution reaction?\n(a) -COOH\t(b) -SO3H\t(c) -NO2\t(d) -CN")
+        undo()
+        if a2 == "c":
+            correct()
+            h+=1
+        elif a2 in ("a","b","d"):
+            wrong()
+        a3=textinput("Qiestion 3","Which type of radiation is not emitted by the electronic structure of atom:\n(a) X- Rays\t(b) Ultraviolent rays\t(c) Visible light\t(d) y-Rays")
+        undo()
+        if a3 == "d":
+            correct()
+            h+=1
+        elif a3 in ("a","b","c"):
+            wrong()
+    elif lev=="Medium":
+        a1=textinput("Quesstion 1","In a regular octahedral molecule MX6,the number of X-M-X bond at 180° is/are:\n(a) 3\t(b) 2\t(c) 6\t(d) 4")
+        if a1 =="a":
+            correct()
+            h+=1
+        elif a1 in ("b","c","d"):
+            wrong()
+        a2=textinput("Question 2","If 0.50 mole of BaCl2 is mixed with 0.20 mol of Na3 PO4, the maximum number of moles of Ba3 (PO4) 2 that can be formed is\n(a) 0.70\t(b) 0.50\t(c) 0.20\t(d) 0.10")
+        undo()
+        if a2 == "d":
+            correct()
+            h+=1
+        elif a2 in ("a","b","c"):
+            wrong()
+        a3= textinput("Question 3"," The conjugate base of hydrazoic acid is :-\n(a) NH3–\t(b) N3–\t(c) N2–\t(d) N---")
+        undo()
+        if a3 == "b":
+            correct()
+            h+=1
+        elif a3 in ("a","c","d"):
+            wrong()
+    elif lev=="Hard":
+        a1=textinput("Question 1","Considering the basic strength of amines in aqueous solution, which one has the smallest pKb value?\n(a) (CH3)3N\t(b) C6H5NH2\t(c) (CH3)2NH\t(d) CH3NH2")
+        if a1=="c":
+            correct()
+            h+=1
+        elif a1 in ("a","b","d"):
+            wrong()
+        a2=textinput("Question 2","The possible geometrical isomers shown by [Co(en)Br2Cl2]¯ is:\n(a) 2\t(b) 3\t(c) 4\t(d) 6")
+        if a2 == "c":
+            correct()
+            h+=1
+        elif a2 in ("a","b","d"):
+            wrong()
+        a3=textinput("Question 3","One mole of N2H4 loses ten moles of electrons to form a new compound Y.\nAssuming that all the nitrogen appears in the new compound, what is the oxidation \nstate of nitrogen in Y? (There is no change in the oxidation state of hydrogen).\n(a) –1\t(b) –3\t(c) +3\t(d) +5")
+        undo()
+        if a3 == "c":
+            correct()
+            h+=1
+        elif a3 in ("a","b","d"):
+            wrong()
+    p=textinput("","Do you want to know your total score")
+    undo()
+    return h ,p
+Screen()
+setup(750,650)
+title("Quiz")
+bgcolor("black")
+setup(750,650)
+goto(0,200)
+pencolor("orange")
+pensize("3")
+hideturtle()
+tracer(0)
+write("QUIZ",align="center",font=("Copper Black",70,"normal"))
+
+m=textinput("Subjects","Please enter the subject you want to play the quiz in \n (Maths/Chemistry/Physics)")
+lev=textinput("Level",'Select your level:\n {Easy,Medium,Hard}')
+
+if m=="Maths":
+    h,p=maths()
+elif m=="Chemistry":
+    h,p=chemistry()
+elif m=="Physics":
+    h,p=physics()
+penup()
+goto(0,150)
+pencolor("blue")
+goto(0,-200)
+pencolor("green")
+if p in ("Yes","yes"):
+     write("Your total score is",align="center",font=("Copper Black",25,"normal"),)
+     write(h,align="center",font=("Copper Black",160,"normal"))
+done()
